@@ -584,7 +584,7 @@ a.icon-up-bg:hover {color: #212121;}
 .footer-column h4 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #4CAF50; /* Warna judul kolom */
+    color: #3498db; /* Warna judul kolom */
 }
 
 .footer-column p {
@@ -593,7 +593,7 @@ a.icon-up-bg:hover {color: #212121;}
 }
 
 .footer-column a {
-    color: #4CAF50; /* Warna link */
+    color: #ffffff; /* Warna link */
     text-decoration: none;
 }
 
