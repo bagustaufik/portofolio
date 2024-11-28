@@ -1,13 +1,4 @@
-/*
- * Theme Name: 
- * Theme URI: 
- * Author: Milan Savov
- * Author URI/Mail: milan.savov@gmail.com
- * Version: 1.0
- * */
 
-/* FONT
-================================================== */
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?37927580');
@@ -834,4 +825,49 @@ footer a:hover {
 }
 #contact {
     padding-top: 60px; /* Memberikan sedikit ruang dari bagian atas halaman */
+}
+/* Kontainer untuk tombol */
+.button-container {
+    display: flex; /* Tata letak horizontal dengan Flexbox */
+    justify-content: center; /* Pusatkan tombol */
+    gap: 15px; /* Jarak antara tombol */
+    margin-top: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Gaya dasar tombol */
+.btn {
+    display: inline-block;
+    padding: 12px 30px; /* Ukuran tombol */
+    font-size: 16px; /* Ukuran teks */
+    font-weight: 500; /* Ketebalan teks */
+    border-radius: 30px; /* Membuat tombol berbentuk oval */
+    text-align: center; /* Teks di tengah tombol */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Efek transisi saat hover */
+    text-decoration: none; /* Hilangkan garis bawah */
+}
+
+/* Tombol dengan gaya transparan (Hire Me dan Explore More) */
+.btn-border {
+    background-color: transparent; /* Transparan */
+    color: #007bff; /* Teks biru */
+    border: 2px solid #007bff; /* Border biru */
+}
+
+.btn-border:hover {
+    background-color: #007bff; /* Warna biru solid saat hover */
+    color: #fff; /* Teks putih saat hover */
+}
+
+/* Responsif: Tombol ditumpuk pada layar kecil */
+@media (max-width: 576px) {
+    .button-container {
+        flex-direction: column; /* Tombol ditumpuk secara vertikal */
+        gap: 10px; /* Jarak antar tombol */
+    }
+
+    .btn {
+        width: 100%; /* Tombol melebar penuh */
+        text-align: center;
+    }
 }
