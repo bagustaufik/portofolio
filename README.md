@@ -1,2 +1,3 @@
-# portofolio
-portofolio
+NAMA  : BAGUS TAUFIK HIDAYAT
+NIM   : 221011400105
+KELAS : 05CSTPLE003
