@@ -1,0 +1,80 @@
+/* Set global styles */
+body {
+    font-family: 'Jura', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/background1.jpg'); /* Ganti dengan URL gambar latar belakang Anda */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00ff00; /* Green on hover */
+  }
+  
+  .game-container {
+    display: none; /* Menyembunyikan grid permainan saat halaman dimuat */
+    grid-template-columns: repeat(10, 30px); /* 10 columns */
+    grid-template-rows: repeat(20, 30px); /* 20 rows */
+    gap: 2px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    border: 1px solid #222;
+  }
+  
+  .cell.active {
+    background-color: #00ff00; /* Tetris block color */
+  }
+  
+  .cell.filled {
+    background-color: #ff6347; /* Filled cells color */
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #888;
+  }
+  
