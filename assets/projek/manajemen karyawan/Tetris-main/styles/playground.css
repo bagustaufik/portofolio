@@ -1,0 +1,101 @@
+.playgroundContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 12px;
+  background-color: #000000; /* Purple */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.grid {
+  margin: 1em;
+  width: calc(var(--columns) * var(--block-width));
+  height: calc(var(--rows) * var(--block-width));
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  flex-shrink: 0;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.playgroundBlock {
+  width: var(--block-width);
+  height: var(--block-width);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.3);
+  background-color: #ffffff; /* Yellow */
+  color: #2c3e50; /* Dark Gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.playgroundBlock:hover {
+  background-color: #ffffff; /* Hover Color */
+  transform: scale(1.05);
+}
+
+.erasing {
+  animation: colorFlick 0.3s 2;
+}
+
+.specialErasing {
+  animation: tetrisFlick 0.2s 3;
+}
+
+.playgroundButton {
+  background-color: #e74c3c; /* Red */
+  color: white;
+  border-radius: 8px;
+  border: 2px solid #c0392b; /* Dark Red */
+  transition: all 0.3s ease-in-out;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.playgroundButton:hover {
+  background-color: #c0392b; /* Darker Red */
+  border: 2px solid #e74c3c;
+}
+
+.buttonPulse {
+  animation: pulse infinite 1.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    border: 2px solid #c0392b;
+  }
+  50% {
+    border: 2px solid #e74c3c;
+  }
+}
+
+@keyframes colorFlick {
+  0% {
+    background-color: #fafafa;
+  }
+  80% {
+    background-color: #ffffff; /* Darker Yellow */
+  }
+}
+
+@keyframes tetrisFlick {
+  0% {
+    background-color: #16a085; /* Greenish Blue */
+  }
+  50% {
+    background-color: #1abc9c; /* Lighter Green */
+  }
+  100% {
+    background-color: #d35400; /* Orange */
+  }
+}
+
+.playgroundBottom {
+  width: var(--block-width);
+}
