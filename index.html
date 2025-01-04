@@ -234,6 +234,12 @@
                 <div class="text-center">
                     <h3>My Galery</h3>
                     <img src="assets/img/lines.svg"  class="img-lines" alt="lines">
+                  <div class="filters">
+                    <button class="filter-btn" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="certificate">Certificate</button>
+                </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-xs-6">
@@ -329,6 +335,30 @@
                 </div>
             </div>
         </section><!-- /.secton-portfolio -->
+
+      <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+
+                portfolioItems.forEach(item => {
+                    const category = item.parentElement.getAttribute("data-category");
+
+                    if (filter === "all" || category === filter) {
+                        item.parentElement.style.display = "block";
+                    } else {
+                        item.parentElement.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+
 
         <div class="container" id="contact">
           <!-- Judul dan Subjudul -->
